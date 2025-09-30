@@ -73,6 +73,9 @@ def reset_world():
     zombie = Zombie()
     world.append(zombie)
 
+    balls = [Ball() for i in range(20)]
+    world += balls
+
 open_canvas()
 
 reset_world()
