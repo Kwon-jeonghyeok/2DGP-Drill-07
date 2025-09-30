@@ -49,6 +49,11 @@ class Ball:
             self.image = small_ball
         else:
             self.image = large_ball
+    def update(self):
+        self.y -= 10
+
+    def draw(self):
+        self.image.draw(self.x,self.y)
         pass
 
 def handle_events():
