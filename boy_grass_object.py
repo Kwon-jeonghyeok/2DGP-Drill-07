@@ -45,12 +45,20 @@ class Ball:
         self.y = 599
         large_ball = load_image('ball41x41.png')
         small_ball = load_image('ball21x21.png')
+        self.speed = random.randint(1,10)
         if random.randint(0,1) == 0:
             self.image = small_ball
         else:
             self.image = large_ball
     def update(self):
-        self.y -= 10
+
+       if self.y < 60:
+           self.y = 60
+           self.speed =0
+       else:
+           self.y -= self.speed
+
+
 
     def draw(self):
         self.image.draw(self.x,self.y)
