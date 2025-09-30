@@ -43,20 +43,31 @@ class Ball:
     def __init__(self):
         self.x = random.randint(100,700)
         self.y = 599
+        self.bottom =61
         large_ball = load_image('ball41x41.png')
         small_ball = load_image('ball21x21.png')
         self.speed = random.randint(1,10)
         if random.randint(0,1) == 0:
             self.image = small_ball
+            self.bottom = 61
         else:
             self.image = large_ball
+            self.bottom = 71
     def update(self):
 
-       if self.y < 60:
-           self.y = 60
-           self.speed =0
-       else:
-           self.y -= self.speed
+        if self.bottom == 61:
+            if self.y < 61:
+                self.y = 61
+                self.speed =0
+            else:
+                self.y -= self.speed
+        if self.bottom == 71:
+            if self.y < 71:
+                self.y = 71
+                self.speed =0
+            else:
+                self.y -= self.speed
+
 
 
 
