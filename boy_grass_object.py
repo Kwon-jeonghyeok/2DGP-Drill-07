@@ -69,9 +69,6 @@ class Ball:
             else:
                 self.y -= self.speed
 
-
-
-
     def draw(self):
         self.image.draw(self.x,self.y)
         pass
@@ -105,12 +102,10 @@ open_canvas()
 
 reset_world()
 
-
 def update_world():
     for o in world:
         o.update()
     pass
-
 
 def render_world():
     clear_canvas()
@@ -119,12 +114,10 @@ def render_world():
     update_canvas()
     pass
 
-
 while running:
     handle_events() #사용자 입력 처리
     update_world() #객체들의 상호작용을 시뮬레이션, 계산
     render_world() #객체들의 현재 상태를 화면에 그린다.
     delay(0.05)
-
 
 close_canvas()
