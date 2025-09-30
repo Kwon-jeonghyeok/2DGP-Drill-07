@@ -46,7 +46,8 @@ class Ball:
         self.bottom =61
         large_ball = load_image('ball41x41.png')
         small_ball = load_image('ball21x21.png')
-        self.speed = random.randint(1,10)
+
+        self.speed = random.randint(1000,10000) / 1000.0
         if random.randint(0,1) == 0:
             self.image = small_ball
             self.bottom = 61
