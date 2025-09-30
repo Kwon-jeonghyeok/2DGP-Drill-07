@@ -41,6 +41,14 @@ class Zombie:
 
 class Ball:
     def __init__(self):
+        self.x = random.randint(100,700)
+        self.y = 599
+        large_ball = load_image('ball41x41.png')
+        small_ball = load_image('ball21x21.png')
+        if random.randint(0,1) == 0:
+            self.image = small_ball
+        else:
+            self.image = large_ball
         pass
 
 def handle_events():
